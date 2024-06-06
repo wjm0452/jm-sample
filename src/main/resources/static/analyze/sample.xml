@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+        </xf:model>
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+		var userId = null;
+		let userId = null;
+		const userId = "test";
+test = "";
+function agweg() {};
+
+
+	scwin.onpageload = function() {
+		tets(function() {
+			test();});
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+	scwin.trigger1_onclick = function(e) {
+		var result = autoComplete1.validate();
+		alert(result);
+	};
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:autoComplete editType="select" id="autoComplete1" useKeywordHighlight="false" style="height: 30px;margin: 50px;width: 200px;"
+    		submenuSize="auto" search="start" allOption="" chooseOption="true" chooseOptionLabel="Select a city" ref="" mandatory="true" placeholder="rrr">
+    		<w2:choices>
+    			<w2:item>
+    				<w2:label><![CDATA[Hanoi]]></w2:label>
+    				<w2:value><![CDATA[001]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[Danang]]></w2:label>
+    				<w2:value><![CDATA[002]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[Taipei]]></w2:label>
+    				<w2:value><![CDATA[003]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[Bangkok]]></w2:label>
+    				<w2:value><![CDATA[004]]></w2:value>
+    			</w2:item>
+    		</w2:choices>
+    	</w2:autoComplete>
+    	<xf:trigger type="button" style="width: 200px;height: 30px;margin-left: 50px;font-size: 20px;font-family: consolas;" id="trigger1" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[validate();]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>
