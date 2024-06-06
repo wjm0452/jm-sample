@@ -8,16 +8,19 @@ public class Rename {
 
     public static void main(String[] args) throws Exception {
 
-        Files.walk(Paths.get("C:\\Users\\원종만\\Downloads\\새 폴더 (5)")).forEach(p -> {
+        String srcExt = "dat";
+        String dstExt = "sam";
 
-            if (!p.getFileName().toString().endsWith("webp")) {
+        Files.walk(Paths.get("C:\\Users\\파이리경로")).forEach(p -> {
+
+            if (!p.getFileName().toString().endsWith(srcExt)) {
                 return;
             }
 
             File f = p.toFile();
 
             String dir = f.getParentFile().getAbsolutePath();
-            String newName = f.getName().replace(".webp", ".png");
+            String newName = f.getName().replace("." + srcExt, "." + dstExt);
 
             try {
                 Files.move(p, Paths.get(dir, newName));
